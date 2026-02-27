@@ -26,56 +26,584 @@ h3 {
 } */
 
 
+
+
 html{
+    font-size: 33px;
 
-font-size: 15px;
-
-}
-body {background-color: rgba(222, 48, 0, 0.893);}
-
-h1
-{
-   font-size:15rem;
-   margin-bottom: -4rem;
-   text-align: center;
-   letter-spacing: -1rem;
-
-}
-
-h3
-{
-    font-size: 25px;
-    font-weight: bold;
-    margin-bottom: 105px;
-    text-align: center;
-
-}
+    --primary_color: #F6F6F0;
+    --secondary_color: #121212;
+    --accent_color: #F34444;
+    --menuText_color: #ffffff;
+    --text_color: #F6F6F0;
+    --blankingHeight: 150px;
+    --midGap: 15px;
+    --smallGap:5px;
+    --largeGap: 60px;
 
 
-.q_and_a {
-    width: 500px;
-    margin: auto;
 
-    .question{
-        font-size: 1.5rem;
-        letter-spacing: -0.5px;
-        text-transform: uppercase;
-        font-weight: bold;
-    }
+
+
     
-    .answer{
-        font-size: 1.4rem;
-        margin-bottom: 6rem;
-        text-indent: 1.5rem;
-    }
+}
+
+*{
+    margin: 0;
+    padding: 0;
 }
 
 
 
-.q_and_a,
-h1,
-h3 {
+
+body {
     font-family: Arial, Helvetica, sans-serif;
-    color: rgb(247, 249, 244);
+    background-color: var(--primary_color);
+    
 }
+
+
+/*-- ------------------------ DETAIL ------------------------------------*/
+
+.detailThin{
+background-color: #F34444;
+height: calc(var(--midGap) * 3);
+width: 100%;
+background-image: linear-gradient(to top, #cecec7 , var(--primary_color) 25px, #cecec7);
+
+}
+
+
+
+.detailMed{
+background-color: #F34444;
+height: calc(var(--largeGap) * 4);
+width: 100%;
+background-image: linear-gradient(to top, #cecec7 , var(--primary_color) 25px, #cecec7);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+hr{
+ 
+    height: 2px;
+    color: #000000;
+    background-color: #000000;
+    border: 0;
+    font-size: 0;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+
+}
+
+
+
+
+/*------------------------TOP BAR----------------------------------*/
+
+.TopBarSticky
+{
+    top: 0;
+    position: sticky;
+    display: flex;
+    margin: -10px;
+    height: 75px;
+    background-color: var(--primary_color);
+    align-items: center;
+    z-index: 4;
+}
+
+.menuItemsContainer
+{     
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left: var(--largeGap);
+    align-items: center;
+    justify-content: center;
+
+}
+
+.menuItems
+{   
+    color: var(--secondary_color);
+    text-transform: uppercase;
+    margin-right: var(--midGap);
+    font-size: 0.5rem;
+
+
+}
+
+.menuItems:hover{
+    color: var(--accent_color);
+}
+
+/*-------------------------- FOCAL LENGTH DISPLAY --------------------------------*/
+
+.focalSection
+{
+    margin: -10px;
+    max-height: 565%
+}
+
+.focalContainer
+{
+    
+    overflow: hidden;
+    height: 900px;
+    background-color: #191919;
+    flex-wrap: wrap;
+
+}
+
+.focalImage
+{
+    display: block;  
+    object-position: center;
+    object-fit:cover;
+    min-width: 100%;
+    
+}
+
+
+
+
+
+.bottomBlanking
+{
+    background-color:var(--secondary_color);
+    height: var(--blankingHeight);
+    margin:-10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-- ------------------------ REAL SLIDER ------------------------------------*/
+
+
+
+.focalRing{
+margin-top: 0px;
+position: absolute;
+background-image: linear-gradient(to top, rgb(45, 45, 45), rgb(28, 28, 28));
+width: 110%;
+height: 155px;
+margin-bottom: 600px;
+
+}
+
+.detailContainer{
+    display: flex;
+    width: 100%;
+    position: absolute;
+    height: 155px;
+
+
+}
+
+
+.detail01{
+    display: flex;
+    background-color:rgb(255, 242, 0);
+    height: 100%;
+    min-width: 15px;
+    margin-left: 5px;
+    background-image: linear-gradient(to left, rgb(31, 31, 31), rgb(48, 48, 48),  rgb(31, 31, 31));
+    
+
+
+}
+
+
+
+.focalShadow{
+
+    background-image: linear-gradient(to top, rgb(12, 12, 12) , transparent 65px,  rgb(19, 19, 19));
+    height: 100%;
+    width: 100%;
+    z-index: 3;
+    position: absolute;
+}
+
+
+.focalRingButton{
+
+    width: 100%;
+    height: 115px;
+    position: absolute;
+    background-color: yellow;
+    opacity: 0%;
+}
+
+
+
+
+
+
+
+/*-- ------------------------ SLIDER ------------------------------------*/
+.sliderContainer
+{
+    /* background-color: rgb(155, 0, 0); */
+    display: flex;
+    padding-left: calc(var(--largeGap) + 2px);
+    padding-right: calc(var(--largeGap) + 2px);
+    margin-bottom: var(--midGap);
+    margin-top: calc(var(--largeGap) * 4);
+
+}   
+
+
+.slider
+{   
+
+    text-align: center;
+    width: 100%;
+    height: 8px;
+    box-shadow: 0 0 0 2px black;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+/*-------------------------- OPTIONS --------------------------------*/
+
+
+.options
+{
+    /* background-color: aqua; */
+
+
+    margin-left: var(--largeGap);
+    display: flex;
+    height: 100px;
+    margin-top: var(--midGap);
+    margin-bottom: 0px
+}
+
+
+.currentFocalLength{
+    font-size: 2.5rem;
+    font-weight: bold;
+    background-color: var(--accent_color);
+    margin: auto;
+    padding: var();
+    color: var(--primary_color);
+    width: 295px;
+
+}
+
+
+.filtersContainer{
+
+    display: flex;
+    flex-wrap: wrap;
+    text-transform: uppercase;
+    /* background-color: yellow; */
+    width: 400px;
+    margin: 0px;
+    padding: 0px;
+
+
+}
+
+
+
+.filter{
+    border: 4px var(--secondary_color);
+    border-style: solid;
+    width: 220px;
+    font-size: 0.4rem;
+    margin-left: 15px;
+    margin-bottom: 13px;
+    margin-top: 0px;
+    padding: 5px;
+    height: 23px;
+    background-color:var(--primary_color);
+    align-content: center;
+    font-weight: 555;
+}
+
+
+.deepFilter{
+    display: flex;
+    border: 2px black;
+    border-style: solid;
+    width: 234px;
+    font-size: 0.5rem;
+    margin-left: 5px;
+    margin-top: 0px;
+    margin-bottom: -0px;
+    padding: 5px;
+    background-color: #FFFFFF;
+    font-weight: bold;
+
+}
+
+
+
+
+.yearDropdown{
+    position:relative
+}
+
+.genreDropdown{
+    position:relative
+}
+
+.yearDropdown:hover .yearContainer{
+    display: block;
+
+}
+
+.genreDropdown:hover .genreContainer{
+    display: block;
+}
+
+
+.deepFilter:hover{
+    background-color: #5577C5;
+}
+
+
+
+
+.yearContainer{
+    display: none;
+    position: absolute;
+    text-transform: uppercase;
+    margin: 0px;
+    margin-top: -25px;
+    margin-bottom: 50px;
+    padding: 0px;   
+    z-index: 1;
+    height: 500px;
+    overflow-y: scroll;
+    
+    
+}
+
+
+
+.genreContainer{
+    display: none;
+    position: absolute;
+    text-transform: uppercase;
+    margin: 0px;
+    margin-top: -30px;
+    margin-bottom: 50px;
+    padding: 0px;   
+    z-index: 0;
+}
+
+
+
+
+.animatedBlock{
+    background-color: red;
+    width: 100%;
+    height: calc(100% - 5px);
+    margin-right: var(--largeGap);
+    margin-left: var(--smallGap);
+
+}
+
+
+.abTop{
+    background-color: var(--secondary_color);
+    background-image: linear-gradient(to top, rgb(20, 20, 20), rgb(68, 68, 68));
+    width: 100%;
+    height: 50%;
+}
+
+
+
+.abTopText{
+    color: var(--primary_color);
+    transform: scaleY(0.7);
+    margin-left: var(--largeGap);
+
+}
+
+
+
+.abBottom{
+    background-color: #06ff44;
+    background-image: linear-gradient(to top, var(--secondary_color), rgb(0, 0, 0));
+    width: 100%;
+    height: 50%;
+}
+
+
+.abBottomText{
+    color: var(--primary_color);
+    transform: scaleY(0.7);
+    opacity: 25%;
+    margin-left: var(--largeGap);    
+}
+
+
+
+.optionsSearchBar{
+    border: 4px var(--secondary_color);
+    margin-left: calc(var(--largeGap) + 4px) ;
+    margin-right: calc(var(--largeGap) + 4px);
+    margin-top: calc(var(--smallGap) *2 );
+    margin-bottom: var(--smallGap);
+    box-shadow: 0 0 0 4px black;
+    padding: 15px;
+    align-items: b;
+    font-size: 0.5rem;
+    font-weight: 555;
+    height: 17px;
+    align-content: center;
+}
+
+
+
+
+
+
+/*--------------------------STILL GALLERY --------------------------------*/
+
+
+    
+.masonryStillsList
+{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(var(--largeGap) - var(--midGap) + 5px);
+    margin-right: calc(var(--largeGap) - var(--midGap) + 5px);
+    /* background-color: yellow; */
+    margin-top: 0px
+
+
+
+
+
+}
+
+
+.stillContainer
+{
+    height: 400px;
+    width: 777px;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 5px black;
+    margin: var(--midGap);
+    overflow: hidden;
+
+
+
+}
+
+
+
+.stillTopBar
+{
+    background-color: rgb(0, 0, 0);
+    padding: 0.5rem;
+    height: 40px;
+
+    
+
+}
+
+
+
+.stillTitle
+{
+    margin-top: -10px;
+    color: var(--text_color);
+    display: flex;
+    font-weight: bold;
+
+}
+
+.directorTitle
+{
+    font-size: 0.5rem;
+
+    color: var(--text_color);
+    display: flex;
+}
+
+
+.stillImage
+{
+    display: block;
+    object-fit: cover;
+    width: 100%;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.test{
+    display: flex;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.testParagraph{
+    display: flex;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
 
